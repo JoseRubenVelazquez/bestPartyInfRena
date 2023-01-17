@@ -365,7 +365,10 @@ footer{
     }
     .img4{
         width: 90px;
-        margin-left: 160px;
+        margin-left: 170px;
+    }
+    h2{
+      font-size: 35px;
     }
     
     .faltan{
