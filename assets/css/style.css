@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+    background-size: contain;
+    place-content: center;
+}
+
+body{
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.fondo{
+    background-image: url(../images/fondosirenita2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.img{
+    height: 200px;
+    width: 150px;
+    float: left;
+    margin-top: -220px;
+}
+h1{
+    font-size: 60px;
+    height: 220px;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 200px;
+}
+/*seccion 2*/
+h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+    font-weight: 500;
+}
+.img2{
+    border-radius: 50%;
+    height: 300px;
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+/* hover*/
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.card div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+img{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+.card .front{
+    transform: perspective(300px) rotateY(0deg);
+}
+.card .back{
+    transform: perspective(300px) rotateY(180deg);
+}
+.card:hover .front{
+    transform: perspective(300px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(300px) rotateY(360deg);
+}
+p{
+    text-align: center;
+}
+
+/*Parte 2*/
+.img2{
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    height: 200px;
+}
+
+/*Gallery*/
+.gallery {
+    --s: 200px; /* control the size */
+    --r: 45px;  /* control the triangular shape */
+    
+    display: grid;
+    gap: 6px;
+    grid: auto-flow var(--s)/repeat(2,var(--s));
+    cursor: pointer;
+  }
+  .gallery > img {
+    object-fit: cover;
+    transition: .5s;
+  }
+  .gallery > img:is(:nth-child(1),:nth-child(4)) {
+    width: 100%;
+    height: calc(100% + var(--r));
+  }
+  .gallery > img:is(:nth-child(2),:nth-child(3)) {
+    height: 100%;
+    width: calc(100% + var(--r));
+  }
+  .gallery > img:nth-child(1) {
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--r)) calc(50% - var(--r)/2),100% calc(100% - var(--r)),50% 100%,0 calc(100% - var(--r)))
+  }
+  .gallery > img:nth-child(2) {
+    place-self: end;
+    clip-path: polygon(var(--r) 0,100% 0,100% 100%,calc(50% + var(--r)/2) calc(100% - var(--r)),var(--r) 100%,0 50%)
+  }
+  .gallery > img:nth-child(3) {
+    clip-path: polygon(0 0,calc(50% - var(--r)/2) var(--r),calc(100% - var(--r)) 0,100% 50%,calc(100% - var(--r)) 100%,0 100%)
+  }
+  .gallery > img:nth-child(4) {
+    place-self: end;
+    clip-path: polygon(0 var(--r), 50% 0,100% var(--r),100% 100%,0 100%,var(--r) calc(50% + var(--r)/2))
+  }
+  .gallery:hover {
+    --r: 0px;
+  }
+/*Boton Mapa*/
+  .btn{
+    width: 150px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #000;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    cursor: pointer;
+    border-color: #000;
+    translate: 1px;
+    font-size: 20px;
+    color: #000;
+   
+}
+.whats{
+    height: 30px;
+}
+
+/*Parte 3*/
+.img3{
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 200px;
+    margin-top: -60px;
+}
+
+/*Confirmar evento*/
+.confirm{
+    width: 180px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #000;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 22px;
+    color: #000;
+    margin: auto;
+    margin-bottom: 10px; 
+    padding: 0 auto;
+    text-align: center;
+}
+.confirm:hover{
+    cursor: pointer;
+    border-color: #000;
+    translate: 1px;
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+}
+
+.whats{
+    width: 25px;
+    margin: 5px 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+} 
+a:hover{
+    cursor: pointer;
+    border-color: #000;
+    translate: 1px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+.img4{
+    height: 200px;
+    margin-left: 200px;
+    margin-top: -160px;
+    display: block;
+    position: absolute;
+}
+
+/*Temporizador*/
+.timer{
+    display: inline-block;
+    padding: 10px;
+    color: #000;
+    font-size: 20px;
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    height: 100px;
+  }
+  .countdown div{
+    float: left;
+    padding: 10px;
+    color: #000;
+    font-weight: 500; 
+    height: 100px; 
+  }
+  .countdown p{
+      width: auto;
+      font-weight: bolder;
+      font-size: 50px;
+  }
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 55px;
+    margin: auto auto 5px;
+    color: #000;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.footer{
+    text-align: center;
+    font-weight: 1000;
+    line-height: 25px;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.phone{
+    text-align: center;
+    font-weight: 500;
+    line-height: 2px;
+    letter-spacing: 3px;
+}
+
+.mensaje-final{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 122px;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(-250%);
+    transition: ease-in-out 0.5s;
+}
+.img-final{
+    height: 786px;
+    width: 1325px;
+}
+/*responsive*/
+@media(min-width: 320px) and (max-width: 650px){
+    h1{
+        font-size: 40px;
+        height: 220px;
+        color: #000;
+        font-weight: bold;
+        padding-left: 150px;
+        padding-top: 30px;
+    }
+
+    .gallery {
+        --s: 150px; /* control the size */
+        --r: 45px;  /* control the triangular shape */
+        
+        display: grid;
+        gap: 6px;
+        grid: auto-flow var(--s)/repeat(2,var(--s));
+        cursor: pointer;
+      }
+      .gallery > img {
+        object-fit: cover;
+        transition: .5s;
+      }
+      .gallery > img:is(:nth-child(1),:nth-child(4)) {
+        width: 100%;
+        height: calc(100% + var(--r));
+      }
+      .gallery > img:is(:nth-child(2),:nth-child(3)) {
+        height: 100%;
+        width: calc(100% + var(--r));
+      }
+      .gallery > img:nth-child(1) {
+        clip-path: polygon(0 0, 100% 0, calc(100% - var(--r)) calc(50% - var(--r)/2),100% calc(100% - var(--r)),50% 100%,0 calc(100% - var(--r)))
+      }
+      .gallery > img:nth-child(2) {
+        place-self: end;
+        clip-path: polygon(var(--r) 0,100% 0,100% 100%,calc(50% + var(--r)/2) calc(100% - var(--r)),var(--r) 100%,0 50%)
+      }
+      .gallery > img:nth-child(3) {
+        clip-path: polygon(0 0,calc(50% - var(--r)/2) var(--r),calc(100% - var(--r)) 0,100% 50%,calc(100% - var(--r)) 100%,0 100%)
+      }
+      .gallery > img:nth-child(4) {
+        place-self: end;
+        clip-path: polygon(0 var(--r), 50% 0,100% var(--r),100% 100%,0 100%,var(--r) calc(50% + var(--r)/2))
+      }
+      .gallery:hover {
+        --r: 0px;
+      }
+   
+      .img3{
+        position: relative;
+        display: block;
+        width: 150px;
+        height: 200px;
+        margin-top: -40px;
+    }
+    .confirm{
+        width: 150px;
+        height: 40px;
+        border: 2px solid;
+        border-color: #000;
+        border-radius: 10px;
+        letter-spacing: 1x;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 22px;
+        color: #000;
+        margin: auto;
+        margin-bottom: 10px; 
+        padding: 0 auto;
+        text-align: center;
+    }
+    .whats{
+        height: 30px;
+    }
+    .img4{
+        width: 90px;
+        margin-left: 160px;
+    }
+    
+    .faltan{
+      margin: 30px;
+    }
+    .timer{
+        display: inline-block;
+        margin: 0 30px 0 40px;
+        color: #000;
+        font-size: 20px;
+        position: relative;
+        bottom: 30px;
+        text-align: center;
+        height: 100px;
+      }
+      .countdown div{
+        float: left;
+        padding: 10px;
+        color: #000;
+        font-weight: 500; 
+        height: 100px; 
+      }
+      .countdown p{
+          width: auto;
+          font-weight: 500;
+          font-size: 35px;
+      }
+    }
